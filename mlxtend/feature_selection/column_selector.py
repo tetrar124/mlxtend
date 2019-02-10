@@ -77,7 +77,7 @@ class ColumnSelector(BaseEstimator):
 
         # We use the loc accessor if the input is a pandas dataframe
         if hasattr(X, 'loc'):
-            t = X.loc[:, self.cols].values
+            t = X.iloc[:, self.cols].values
         else:
             t = X[:, self.cols]
 
